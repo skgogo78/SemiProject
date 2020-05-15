@@ -1094,7 +1094,7 @@ public class ReviewServlet extends HttpServlet {
 
 			CategoryReviewBiz categoryReviewViewBiz = (CategoryReviewBizImpl) biz;
 			list = categoryReviewViewBiz.selectList(start, end, keyword, category, m_id);
-
+			System.out.println(list);
 		}
 
 		if (list.size() != 0) {

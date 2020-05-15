@@ -15,8 +15,19 @@
 			items="${ReviewView_List}">
 			<c:choose>
 				<c:when test="${empty dto.cr_path}">
-						<c:set var="cate" value="${dto.cr_category}"></c:set>
-						<c:set var="path">./images/default/${cate}/<%=(int)(Math.random()*10)+1%>.jpg</c:set>
+					<c:choose>
+						<c:when test="${dto.cr_category eq '호텔'}">
+							<c:set var="cate">1</c:set>
+						</c:when>
+						<c:when test="${dto.cr_category eq '맛집'}">
+							<c:set var="cate">2</c:set>
+						</c:when>
+						<c:otherwise>
+							<c:set var="cate">3</c:set>
+						</c:otherwise>
+					</c:choose>
+						
+					<c:set var="path">./images/default/${cate}/<%=(int)(Math.random()*10)+1%>.jpg</c:set>
 				</c:when>
 				<c:otherwise>
 					<c:set var="path" value="${dto.cr_path}"></c:set>
