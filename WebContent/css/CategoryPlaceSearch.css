@@ -3,14 +3,15 @@
 #searchBox {
     display: block;
     position: fixed;
-    top: 130px;
-    left: 420px;
+    top: 50%;
+    left: 50%;
     background-color: #FFFFFF;
     border: 0.4px solid #C1C6C8;
     width: 812px;
     height: 515px;
     border-radius: 25px;
     box-shadow: -1.5px 1.5px 3px 0px #18425e59;
+    transform: translate(-50%, -50%);
 }
 
 #searchBox .box {

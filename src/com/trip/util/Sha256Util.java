@@ -29,4 +29,11 @@ public class Sha256Util {
 		return returnVal;
 	}
 
+	public static void main(String[] args) {
+		
+		System.out.println(encSha256("123123"));
+		
+	}
+	
 }
+
